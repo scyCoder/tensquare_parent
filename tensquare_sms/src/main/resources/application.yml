@@ -1,0 +1,11 @@
+server:
+  port: 9009
+spring:
+  rabbitmq:
+    host: 192.168.89.166
+    port: 5672
+aliyun:
+  config:
+    accessKeyId: LTAIbzuUhxVW8GDT
+    accessKeySecret: SXEYEjZTnSa2uo2Pf77llrXt2XhvjC
+    signName: 速运

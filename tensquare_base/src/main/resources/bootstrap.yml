@@ -1,0 +1,9 @@
+#配置config client相关
+spring:
+  cloud:
+    config:
+      label: master #分之名称
+      name: base #配置文件应用名称
+      profile: dev #配置文件环境名称
+      uri: http://192.168.89.171:12000 #指定配置中心地址
+

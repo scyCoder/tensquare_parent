@@ -1,0 +1,23 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: tensquare-config
+  #配置git远程仓库相关信息
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/lvhonlgong/tensquare-68-config.git #git仓库地址
+#          username:如果是私有仓库，设置用户名密码
+#          password:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.89.171:6868/eureka
+
+management: #暴露触发消息总线的url
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

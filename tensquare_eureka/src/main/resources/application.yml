@@ -1,0 +1,11 @@
+server:
+  port: 6868 #默认端口8761
+#指定Eureka Server端相关配置
+eureka:
+  client:
+    register-with-eureka: false #本项目不需要注册到Eureka Server本身就是Eureka Server
+    fetch-registry: false #是否从Eureka Server获取其他微服务实例注册信息
+    service-url: #指定eureka Client跟Eureka server交互（通信）地址
+      defaultZone: http://192.168.89.171:${server.port}/eureka
+
+

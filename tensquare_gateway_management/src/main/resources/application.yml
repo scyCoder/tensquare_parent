@@ -1,0 +1,37 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: tensquare-gateway-management
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+jwt:
+  config:
+    ttl: 72
+    signName: itcast
+#请求跟目标微服务直接映射关系)
+zuul:
+  routes:
+    tensquare-base: #此节点信息名称可以任意
+      serviceId: tensquare-base #目标微服务名称（跟配置文件中应用名称一致）
+      path: /base/** #访问路径
+    tensquare-article:
+      serviceId: tensquare-article
+      path: /article/**
+    tensquare-friend:
+      serviceId: tensquare-friend
+      path: /friend/**
+    tensquare-gathering:
+      serviceId: tensquare-gathering
+      path: /gathering/**
+    tensquare-recruit:
+      serviceId: tensquare-recruit
+      path: /recruit/**
+    tensquare-spit:
+      serviceId: tensquare-spit
+      path: /spit/**
+    tensquare-user:
+      serviceId: tensquare-user
+      path: /user/**
